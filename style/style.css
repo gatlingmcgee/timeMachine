@@ -1,0 +1,23 @@
+:root {
+   /*Colors*/
+   --primary-color: #003245;
+   --secondary-color: #c7e8fa;
+   --accent-color: #dd8c3c;
+
+   /*Fonts*/
+   --heading-font: nasalization, sans-serif;
+   --paragraph-font:mono45-headline, monospace;
+
+   /*Font Sizes*/
+   --font-size-base: 30px;
+   --font-size-header: 80px;
+   --font-size-large: 50px;
+   --font-size-bold: 120px;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
