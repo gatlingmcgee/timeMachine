@@ -3,6 +3,7 @@
    --primary-color: #003245;
    --secondary-color: #c7e8fa;
    --accent-color: #dd8c3c;
+   --accent-color2: #69A6CB;
 
    /*Fonts*/
    --heading-font: mono45-headline, monospace;
@@ -52,7 +53,7 @@ body {
    position: absolute;
    top: 14rem;
    margin-left: 2rem;
-   width: 36rem;
+   width: 25rem;
 }
 
 .tm {
@@ -71,18 +72,19 @@ button {
    border-radius: 2rem;
    color: var(--primary-color);
    background-color: var(--accent-color);
+   cursor: pointer;
 }
 
 .hero button {
    position: absolute;
    z-index: 10;
-   top: 21rem;
+   top: 25rem;
    left: -0.25rem;
 }
 
 /* Data */
 .apiInfo {
-   margin-left:2rem;
+   margin-left:1rem;
 }
 
 .nav {
@@ -98,4 +100,113 @@ button {
 }
 
 /* Year */
+#year-display {
+   display: flex;
+   gap: 20px;
+   font-family: var(--heading-font);
+   font-size: var(--font-size-bold);
+   text-align: center;
+   position: absolute;
+   top: 15rem;
+   left: 42%;
+}
 
+.segment-display,
+.segment-overlay {
+   width: 5rem;
+}
+
+.segment-display {
+   position: relative;
+   height: 100%;
+}
+
+.segment-display_top,
+.segment-display_bottom {
+   overflow: hidden;
+   text-align: center;
+   width: 100%;
+   height: 50%;
+   position: relative;
+}
+
+.segment-display_top {
+   background-color: var(--secondary-color);
+   color: var(--primary-color);
+   line-height: 1.5;
+   border-radius: 2rem;
+}
+
+.segment-display_bottom {
+   background-color: var(--secondary-color);
+   color: var(--primary-color);
+   line-height: 0;
+   border-radius:0 0 2rem 2rem;
+}
+
+.segment-overlay {
+   position: absolute;
+   top: 0;
+   height: 100%;
+   perspective: 400px;
+}
+
+.segment-overlay_top, 
+.segment-overlay_bottom {
+   position: absolute;
+   overflow: hidden;
+   text-align: center;
+   width: 100%;
+   height: 50%;
+}
+
+.segment-overlay_top {
+   top: 0;
+   line-height: 1.5;
+   color: var(--primary-color);
+   background-color: var(--secondary-color);
+   transform-origin: bottom;
+   border-radius: 2rem 2rem 0 0;
+}
+
+.segment-overlay_bottom {
+   bottom: 0;
+   line-height: 0;
+   color: var(--primary-color);
+   background-color: var(--secondary-color);
+   border-top: 2px solid var(--primary-color);
+   transform-origin: top;
+   border-radius:0 0 2rem 2rem;
+}
+
+/*Animations*/
+.segment-overlay.flip .segment-overlay_top {
+   animation: flip-top 0.8s linear;
+}
+
+.segment-overlay.flip .segment-overlay_bottom {
+   animation: flip-bottom 0.8s linear;
+}
+
+@keyframes flip-top {
+   0% {
+      transform: rotateX(0deg);
+   }
+   50%, 100% {
+      transform: rotateX(-90deg);
+   }
+}
+
+@keyframes flip-bottom {
+   0%, 50% {
+      transform: rotateX(90deg);
+   }
+   100% {
+      transform: rotateX(0deg);
+   }
+}
+
+/* footer */
+footer {
+   margin: 1rem;
+}
