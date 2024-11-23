@@ -5,13 +5,14 @@
    --accent-color: #dd8c3c;
 
    /*Fonts*/
-   --heading-font: nasalization, sans-serif;
-   --paragraph-font:mono45-headline, monospace;
+   --heading-font: mono45-headline, monospace;
+   --paragraph-font:nasalization, sans-serif;
 
    /*Font Sizes*/
-   --font-size-base: 30px;
+   --font-size-base: 20px;
    --font-size-header: 80px;
    --font-size-large: 50px;
+   --font-size-small: 30px;
    --font-size-bold: 120px;
 }
 
@@ -20,4 +21,81 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+   font-family: var(--paragraph-font);
+   color: var(--primary-color);
+   font-size: var(--font-size-base);
+}
+
+/* Hero */
+.hero {
+   position: relative;
+}
+
+.logo {
+   position: absolute;
+   width: 20rem;
+   margin: 1rem;
+}
+
+.background {
+   width: 100%;
+   height: 50rem;
+   object-fit: cover;
+   z-index: -1;
+}
+
+.hero p {
+   font-family: var(--paragraph-font);
+   color: var(--secondary-color);
+   position: absolute;
+   top: 14rem;
+   margin-left: 2rem;
+   width: 36rem;
+}
+
+.tm {
+   position: absolute;
+   top: 13rem;
+   left: 33%;
+   width: 37rem;
+}
+
+button {
+   font-family: var(--heading-font);
+   font-size: var(--font-size-small);
+   font-weight: bold;
+   padding: 0.5rem 4rem;
+   margin: 2rem;
+   border-radius: 2rem;
+   color: var(--primary-color);
+   background-color: var(--accent-color);
+}
+
+.hero button {
+   position: absolute;
+   z-index: 10;
+   top: 21rem;
+   left: -0.25rem;
+}
+
+/* Data */
+.apiInfo {
+   margin-left:2rem;
+}
+
+.nav {
+   display: flex;  
+}
+
+.nav h1 {
+   padding: 1rem 0;
+}
+
+.navButton {
+   padding-left: 25rem;
+}
+
+/* Year */
 
