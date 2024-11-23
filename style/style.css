@@ -108,7 +108,7 @@ button {
    text-align: center;
    position: absolute;
    top: 15rem;
-   left: 42%;
+   left: 41%;
 }
 
 .segment-display,
@@ -192,13 +192,13 @@ button {
    0% {
       transform: rotateX(0deg);
    }
-   50%, 100% {
+   20%, 100% {
       transform: rotateX(-90deg);
    }
 }
 
 @keyframes flip-bottom {
-   0%, 50% {
+   0%, 20% {
       transform: rotateX(90deg);
    }
    100% {
