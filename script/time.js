@@ -1,6 +1,6 @@
 // Pass in needed HTML
 function getTimeSegmentElements(segmentElement) {
-   console.log(segmentElement); 
+   //console.log(segmentElement); 
    const segmentDisplay = segmentElement.querySelector(".segment-display");
    const segmentDisplayTop = segmentDisplay.querySelector(".segment-display_top");
    const segmentDisplayBottom = segmentDisplay.querySelector(".segment-display_bottom");
