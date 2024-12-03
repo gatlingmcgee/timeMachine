@@ -1,8 +1,6 @@
-//Music Charts API (https://rapidapi.com/LDVIN/api/billboard-api/playground/apiendpoint_23285c2d-abe8-4332-a163-18fc5d8d2700)
-const API_URL3 = "https://billboard-api2.p.rapidapi.com/year-end-chart/hot-100-songs";
-const API_KEY2 = "bf17dc2426msh7666d61e557977bp174193jsn32dea23bc4c1";
+const API_URL3 = "https://echlarson.github.io/jsonStorage/musicChart.json";
 
-//Grab the HTML elements
+// Grab the HTML elements
 const musicButton = document.getElementById("fetch-music");
 
 //Fetch Music
@@ -11,32 +9,28 @@ const fetchMusic = async (year) => {
       //Loading Message
       boxList.innerHTML = "Loading...";
 
-      //Fetch data from API
-      const response = await fetch(`${API_URL3}?year=${year}`, {
-         headers: {
-            "X-Api-Key": API_KEY2,
-          },
-      });
-      
+      const response = await fetch(`${API_URL3}`);
+
       //Is the response ok?
       if(!response.ok) {
-         throw new Error("Failed to fetch Top Hot 100 for that year.");
+         throw new Error("Failed to fetch songs.");
       }
 
       //Convert response to JSON
       const data = await response.json();
+      const topSongs = data.topSongsByYear[year];
 
       //Display Data
-      displaySongs(data);
+      displayMusic(topSongs);
       } catch (error) {
          boxList.innerHTML = `Error: ${error.message}`;
-   }
-};
+      }
+   };
 
-const displaySongs = (songs) => {
+const displayMusic = (songs) => {
    //clear the section
    boxList.innerHTML = "";
-
+   
    if (songs.length === 0) {
       boxList.innerHTML = "No songs found for this year.";
       return;
@@ -45,9 +39,9 @@ const displaySongs = (songs) => {
    //Create Cards
    const list = document.createElement("ul");
 
-   events.forEach ((song) => {
+   songs.forEach ((song) => {
       const card = document.createElement("li");
-      card.textContent = `${song.title} by ${song.artist} (${song.year})`;
+      card.textContent = `${song.rank}. ${song.title} by ${song.artist}`;
       list.appendChild(card);
    });
 
