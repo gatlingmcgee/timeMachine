@@ -87,4 +87,5 @@ document.getElementById('travel').addEventListener('click', () => {
    const randomYear = getRandomYear();
    updateYear(randomYear); // Update the animated year display
    yearDisplay.textContent = randomYear; // Update the header span
+   boxList.innerHTML = "";
 });
