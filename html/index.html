@@ -81,14 +81,13 @@
          <div class="nav">
             <h1>Give <span id="generated-year">0000</span> a spin</h1>
             <div class="navButton">
-               <button type="button">Events</button>
-               <button type="button">People</button>
+               <button type="button" id="fetch-events">Events</button>
+               <button type="button" id="fetch-people">People</button>
+               <button type="button" id="fetch-music">Music</button>
             </div>
          </div> 
 
-         <div class="data">
-            <ul class="boxList"></ul>
-         </div>
+         <div id="boxList"></div>
       </div>
    </main>
 
@@ -96,6 +95,9 @@
       <p>© 2024 | WDD330 | Elizabeth Chlarson</p>
    </footer>
 
-   <script src="../script/time.js" defer></script>
+   <script src="../script/time.js"></script>
+   <script src="../script/eventsAPI.js"></script>
+   <script src="../script/peopleAPI.js"></script>
+   <script src="../script/musicAPI.js"></script>
 </body>
 </html>

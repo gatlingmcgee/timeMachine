@@ -88,15 +88,28 @@ button {
 }
 
 .nav {
-   display: flex;  
+   display: flex;
+   justify-content: space-between;
 }
 
 .nav h1 {
    padding: 1rem 0;
 }
 
-.navButton {
-   padding-left: 25rem;
+#boxList ul{
+   display: flex;
+   flex-wrap: wrap;
+}
+
+#boxList ul li {
+   list-style: none;
+   width: 25rem;
+   height: 20rem;
+   margin: 1rem;
+   padding: 1rem;
+   background-color: var(--secondary-color);
+   border: solid 0.25rem var(--primary-color);
+   border-radius: 1rem;
 }
 
 /* Year */
