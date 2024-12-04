@@ -37,15 +37,24 @@ const displayMusic = (songs) => {
    }
 
    //Create Cards
-   const list = document.createElement("ul");
-
    songs.forEach ((song) => {
-      const card = document.createElement("li");
-      card.textContent = `${song.rank}. ${song.title} by ${song.artist}`;
-      list.appendChild(card);
-   });
+      const card = document.createElement("div");
+      card.setAttribute("class", "card");
 
-   boxList.appendChild(list);
+      const title = document.createElement("h3");
+      const track = document.createElement("p");
+      const content = document.createElement("p");
+
+      title.textContent = `Ranked #${song.rank}`;
+      track.textContent = `${song.title}`; 
+      content.textContent = `by ${song.artist}`;
+
+      card.appendChild(title);
+      card.appendChild(track);
+      card.appendChild(content);
+
+      boxList.appendChild(card);
+   });
 };
 
 musicButton.addEventListener("click", () => {

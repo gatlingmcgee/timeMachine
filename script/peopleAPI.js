@@ -42,15 +42,21 @@ const displayFigures = (figures) => {
    }
 
    //Create Cards
-   const list = document.createElement("ul");
+   figures.forEach ((figure) => {
+      const card = document.createElement("div");
+      card.setAttribute("class", "card");
 
-   figures.forEach ((figure, index) => {
-      const card = document.createElement("li");
-      card.textContent = `${figure.name} (${figure.birth_year || "Unknown"} - ${figure.death_year || "Unknown"})`;
-      list.appendChild(card);
+      const title = document.createElement("h3");
+      const content = document.createElement("p");
+
+      title.textContent = `${figure.name}`;
+      content.textContent = `${figure.birth_year} - ${figure.death_year}`;
+
+      card.appendChild(title);
+      card.appendChild(content);
+
+      boxList.appendChild(card);
    });
-
-   boxList.appendChild(list);
 };
 
 peopleButton.addEventListener("click", () => {
