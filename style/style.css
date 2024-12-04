@@ -96,12 +96,12 @@ button {
    padding: 1rem 0;
 }
 
-#boxList ul{
+#boxList {
    display: flex;
    flex-wrap: wrap;
 }
 
-#boxList ul li {
+.card {
    list-style: none;
    width: 25rem;
    height: 20rem;

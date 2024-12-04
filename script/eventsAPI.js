@@ -45,15 +45,21 @@ const displayEvents = (events) => {
    }
 
    //Create Cards
-   const list = document.createElement("ul");
-
    events.forEach ((event) => {
-      const card = document.createElement("li");
-      card.textContent = `${event.event}`;
-      list.appendChild(card);
-   });
+      const card = document.createElement("div");
+      card.setAttribute("class", "card");
 
-   boxList.appendChild(list);
+      const title = document.createElement("h3");
+      const content = document.createElement("p");
+      
+      title.textContent = `${event.month} / ${event.day} / ${event.year}`;
+      content.textContent = `${event.event}`;
+
+      card.appendChild(title);
+      card.appendChild(content);
+
+      boxList.appendChild(card);
+   });
 };
 
 eventsButton.addEventListener("click", () => {
