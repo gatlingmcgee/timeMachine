@@ -1,5 +1,4 @@
-//Historical Figures API (https://api-ninjas.com/api/historicalfigures)
-const API_URL2 = "https://api.api-ninjas.com/v1/historicalfigures";
+const API_URL2 = "https://echlarson.github.io/jsonStorage/celebrityChart.json";
 
 //Grab the HTML elements
 const peopleButton = document.getElementById("fetch-people");
@@ -10,23 +9,19 @@ const fetchFigures = async (year) => {
       //Loading Message
       boxList.innerHTML = "Loading...";
 
-      // Fetch data from the API for the given year
-      const response = await fetch(`${API_URL2}?name=${year}`, {
-      headers: {
-        "X-Api-Key": API_KEY,
-      },
-    });
+      const response = await fetch(`${API_URL2}`);
 
       //Is the response ok?
       if(!response.ok) {
-         throw new Error("Failed to fetch historical figures.");
+         throw new Error("Failed to fetch celebrity figures.");
       }
 
       //Convert response to JSON
       const data = await response.json();
+      const celebrityBirth = data.celebrityByBirthYear[year];
 
       //Display Data
-      displayFigures(data);
+      displayFigures(celebrityBirth);
       } catch (error) {
          boxList.innerHTML = `Error: ${error.message}`;
    }
@@ -37,7 +32,7 @@ const displayFigures = (figures) => {
    boxList.innerHTML = "";
 
    if (figures.length === 0) {
-      boxList.innerHTML = "No historical figures found for this year.";
+      boxList.innerHTML = "No celebrity figures found for this year.";
       return;
    }
 
@@ -49,8 +44,8 @@ const displayFigures = (figures) => {
       const title = document.createElement("h3");
       const content = document.createElement("p");
 
-      title.textContent = `${figure.name}`;
-      content.textContent = `${figure.birth_year} - ${figure.death_year}`;
+      title.textContent = `${figure.birth_date}`;
+      content.textContent = `${figure.name}`;
 
       card.appendChild(title);
       card.appendChild(content);
