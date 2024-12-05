@@ -42,13 +42,13 @@ const fetchCulture = async (year) => {
          card.setAttribute("class", "card");
    
          const title = document.createElement("h3");
-         const track = document.createElement("p");
+         const track = document.createElement("h3");
          const content = document.createElement("p");
    
          title.textContent = `${pop.date}`;
          track.textContent = `${pop.event}`; 
-         content.textContent = `${pop.details}`;
-   
+         content.textContent = `${pop.description}`;
+ 
          card.appendChild(title);
          card.appendChild(track);
          card.appendChild(content);
