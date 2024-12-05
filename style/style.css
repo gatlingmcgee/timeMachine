@@ -114,20 +114,25 @@ button {
 }
 
 /* Custom scrollbar styles */
+::-webkit-scrollbar,
 .card::-webkit-scrollbar {
-   width: 15px;
+   width: 20px;
 }
 
+::-webkit-scrollbar-track,
 .card::-webkit-scrollbar-track {
    background-color: var(--secondary-color); 
    border-radius: 10px;
 }
- 
+
+::-webkit-scrollbar-thumb,
 .card::-webkit-scrollbar-thumb {
    background-color: var(--primary-color);
    border-radius: 10px;
+   border: solid 4px var(--secondary-color);
 }
- 
+
+::-webkit-scrollbar-thumb:hover,
 .card::-webkit-scrollbar-thumb:hover {
    background-color: var(--accent-color);
 }
