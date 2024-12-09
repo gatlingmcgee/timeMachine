@@ -65,7 +65,7 @@ function updateTimeSection(sectionID, timeValue) {
 // Generate a random year
 function getRandomYear() {
    const minYear = 1940; // Adjust to your range
-   const maxYear = 2023;
+   const maxYear = 2020;
    return Math.floor(Math.random() * (maxYear - minYear + 1)) + minYear;
 }
 

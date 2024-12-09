@@ -110,7 +110,13 @@ button {
    background-color: var(--secondary-color);
    border: solid 0.25rem var(--primary-color);
    border-radius: 1rem;
-   overflow: auto;
+   overflow-x: hidden;
+   overflow-y: auto;
+   overflow-wrap: break-word;
+}
+
+.card p {
+   margin: 1rem 0;
 }
 
 /* Custom scrollbar styles */
