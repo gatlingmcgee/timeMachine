@@ -82,9 +82,28 @@ function updateYear(year) {
 // Select the span to display the year
 const yearDisplay = document.getElementById('generated-year');
 
+// Get the list of generated years from localStorage, if any
+let generatedYears = JSON.parse(localStorage.getItem('generatedYears')) || [];
+
+// Function to generate a new unique year
+function generateUniqueYear() {
+   let randomYear = getRandomYear();
+
+   // Check if the year has already been generated in this session
+   while (generatedYears.includes(randomYear)) {
+      randomYear = getRandomYear(); // Generate a new year if already used
+   }
+
+   // Store the year in the list and in localStorage
+   generatedYears.push(randomYear);
+   localStorage.setItem('generatedYears', JSON.stringify(generatedYears));
+
+   return randomYear;
+}
+
 // Event listener for the button
 document.getElementById('travel').addEventListener('click', () => {
-   const randomYear = getRandomYear();
+   const randomYear = generateUniqueYear();
    updateYear(randomYear); // Update the animated year display
    yearDisplay.textContent = randomYear; // Update the header span
    boxList.innerHTML = "";

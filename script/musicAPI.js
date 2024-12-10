@@ -53,7 +53,7 @@ const displayMusic = (songs) => {
       artist.textContent = `by ${song.artist}`;
       genre.textContent = `Genre: ${song.genre}`;
       album.textContent = `Album: ${song.album}`;
-      releaseDate.textContent = `Album: ${song.releaseDate}`;
+      releaseDate.textContent = `Release Date: ${song.releaseDate}`;
 
       card.appendChild(rank);
       card.appendChild(track);

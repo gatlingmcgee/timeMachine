@@ -68,7 +68,7 @@ button {
    font-size: var(--font-size-small);
    font-weight: bold;
    padding: 0.5rem 1.5rem;
-   margin: 1rem 0.5rem;
+   margin: 1rem 1.5rem;
    border-radius: 2rem;
    color: var(--primary-color);
    background-color: var(--accent-color);
