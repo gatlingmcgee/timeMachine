@@ -41,17 +41,26 @@ const displayMusic = (songs) => {
       const card = document.createElement("div");
       card.setAttribute("class", "card");
 
-      const title = document.createElement("h3");
+      const rank = document.createElement("h3");
       const track = document.createElement("p");
-      const content = document.createElement("p");
+      const artist = document.createElement("p");
+      const genre = document.createElement("p");
+      const album = document.createElement("p");
+      const releaseDate = document.createElement("p");
 
-      title.textContent = `Ranked #${song.rank}`;
+      rank.textContent = `Ranked #${song.rank}`;
       track.textContent = `${song.title}`; 
-      content.textContent = `by ${song.artist}`;
+      artist.textContent = `by ${song.artist}`;
+      genre.textContent = `Genre: ${song.genre}`;
+      album.textContent = `Album: ${song.album}`;
+      releaseDate.textContent = `Album: ${song.releaseDate}`;
 
-      card.appendChild(title);
+      card.appendChild(rank);
       card.appendChild(track);
-      card.appendChild(content);
+      card.appendChild(artist);
+      card.appendChild(genre);
+      card.appendChild(album);
+      card.appendChild(releaseDate);
 
       boxList.appendChild(card);
    });
