@@ -29,22 +29,43 @@ body {
    font-size: var(--font-size-base);
 }
 
+/* Parallax */
+#container {
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   overflow: hidden;
+}
+
+#parallaxImages {
+   position: absolute; /* Ensure it's positioned relative to the container */
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: -1; /* Place behind everything else */
+}
+
+.parallax-item img {
+   position: absolute;
+   width: 100%;
+}
+
+.tm img {
+   width: 35rem;
+   top: 5rem;
+   left: 28rem;
+}
+
 /* Hero */
 .hero {
    position: relative;
+   z-index: 1;
 }
 
 .logo {
    position: absolute;
    width: 18rem;
    margin: 1rem;
-}
-
-.background {
-   width: 100%;
-   height: 40rem;
-   object-fit: cover;
-   z-index: -1;
 }
 
 .hero p {
@@ -54,13 +75,6 @@ body {
    top: 13rem;
    margin-left: 2rem;
    width: 25rem;
-}
-
-.tm {
-   position: absolute;
-   top: 3rem;
-   left: 33%;
-   width: 37rem;
 }
 
 button {
@@ -149,16 +163,16 @@ button {
    display: flex;
    gap: 20px;
    font-family: var(--heading-font);
-   font-size: var(--font-size-bold);
+   font-size: var(--font-size-header);
    text-align: center;
    position: absolute;
-   top: 5.5rem;
+   top: 7rem;
    left: 41%;
 }
 
 .segment-display,
 .segment-overlay {
-   width: 5rem;
+   width: 4rem;
 }
 
 .segment-display {
@@ -179,14 +193,14 @@ button {
    background-color: var(--secondary-color);
    color: var(--primary-color);
    line-height: 1.5;
-   border-radius: 2rem;
+   border-radius: 1rem;
 }
 
 .segment-display_bottom {
    background-color: var(--secondary-color);
    color: var(--primary-color);
    line-height: 0;
-   border-radius:0 0 2rem 2rem;
+   border-radius:0 0 1rem 1rem;
 }
 
 .segment-overlay {
@@ -211,7 +225,7 @@ button {
    color: var(--primary-color);
    background-color: var(--secondary-color);
    transform-origin: bottom;
-   border-radius: 2rem 2rem 0 0;
+   border-radius: 1rem 1rem 0 0;
 }
 
 .segment-overlay_bottom {
@@ -221,7 +235,7 @@ button {
    background-color: var(--secondary-color);
    border-top: 2px solid var(--primary-color);
    transform-origin: top;
-   border-radius:0 0 2rem 2rem;
+   border-radius:0 0 1rem 1rem;
 }
 
 /*Animations*/
