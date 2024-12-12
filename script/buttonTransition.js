@@ -40,8 +40,5 @@ startButton.addEventListener("click", function firstClick() {
         updateYear(randomYear); // Update the animated year display
         yearDisplay.textContent = randomYear; // Update the header span
         boxList.innerHTML = "";
-
-        // You can optionally disable the button to prevent further clicks
-        startButton.disabled = true;
     });
 });
