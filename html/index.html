@@ -9,72 +9,91 @@
 </head>
 <body>
    <main>
-      <div class="hero">
-         <img class="logo" src="../img/Logo.png" alt="Logo">
-         <img class="background" src="../img/Background.png" alt="Forest Background">
-         <img class="tm" src="../img/timeMachine.png" alt="Time Machine">
-         <p>Ready to journey through time? 
-            Just one click and you'll be whisked 
-            away to explore fascinating moments 
-            from the past. History has never been this 
-            fun—step in and see where you'll land!</p>
-         <button type="button" id="travel">Travel</button>
 
-         <div id="year-display">
-
-            <div id="thousands" class="time-section">
-               <div class="time-segment">
-                  <div class="segment-display">
-                     <div class="segment-display_top">0</div>
-                     <div class="segment-display_bottom">0</div>
-                  </div>
-                  <div class="segment-overlay">
-                     <div class="segment-overlay_top">0</div>
-                     <div class="segment-overlay_bottom">0</div>
-                  </div>
-               </div>
-            </div>
-
-            <div id="hundreds" class="time-section">
-               <div class="time-segment">
-                  <div class="segment-display">
-                     <div class="segment-display_top">0</div>
-                     <div class="segment-display_bottom">0</div>
-                  </div>
-                  <div class="segment-overlay">
-                     <div class="segment-overlay_top">0</div>
-                     <div class="segment-overlay_bottom">0</div>
-                  </div>
-               </div>
-            </div>
-
-            <div id="tens" class="time-section">
-               <div class="time-segment">
-                  <div class="segment-display">
-                     <div class="segment-display_top">0</div>
-                     <div class="segment-display_bottom">0</div>
-                  </div>
-                  <div class="segment-overlay">
-                     <div class="segment-overlay_top">0</div>
-                     <div class="segment-overlay_bottom">0</div>
-                  </div>
-               </div>
-            </div>
-
-            <div id="ones" class="time-section">
-               <div class="time-segment">
-                  <div class="segment-display">
-                     <div class="segment-display_top">0</div>
-                     <div class="segment-display_bottom">0</div>
-                  </div>
-                  <div class="segment-overlay">
-                     <div class="segment-overlay_top">0</div>
-                     <div class="segment-overlay_bottom">0</div>
-                  </div>
-               </div>
-            </div>
-
+      <div id="container">
+         <!--Place items in list starting at the furthest and moving closer.-->
+         <div class="parallax-item" data-depth="0.7">
+            <img src="../img/parallaxBackground-02.png" alt="Night Sky">
          </div>
+
+         <div class="parallax-item" data-depth="0.5">
+            <img src="../img/parallaxBottom-02-02.png" alt="Stars">
+         </div>
+
+         <div class="parallax-item" data-depth="0.3">
+            <img src="../img/parallaxMiddle-02.png" alt="Trees">
+         </div>
+
+         <div class="parallax-item tm" data-depth="0.1">
+            <img id="tm" src="../img/parallaxTop-02-02.png" alt="Time Machine">
+         </div>
+
+         <div class="hero">
+            <img class="logo" src="../img/Logo.png" alt="Logo">
+            <p>Ready to journey through time? 
+               Just one click and you'll be whisked 
+               away to explore fascinating moments 
+               from the past. History has never been this 
+               fun—step in and see where you'll land!</p>
+            <button type="button" id="control-button">Start</button>
+
+            <div id="year-display">
+
+               <div id="thousands" class="time-section">
+                  <div class="time-segment">
+                     <div class="segment-display">
+                        <div class="segment-display_top">0</div>
+                        <div class="segment-display_bottom">0</div>
+                     </div>
+                     <div class="segment-overlay">
+                        <div class="segment-overlay_top">0</div>
+                        <div class="segment-overlay_bottom">0</div>
+                     </div>
+                  </div>
+               </div>
+
+               <div id="hundreds" class="time-section">
+                  <div class="time-segment">
+                     <div class="segment-display">
+                        <div class="segment-display_top">0</div>
+                        <div class="segment-display_bottom">0</div>
+                     </div>
+                     <div class="segment-overlay">
+                        <div class="segment-overlay_top">0</div>
+                        <div class="segment-overlay_bottom">0</div>
+                     </div>
+                  </div>
+               </div>
+
+               <div id="tens" class="time-section">
+                  <div class="time-segment">
+                     <div class="segment-display">
+                        <div class="segment-display_top">0</div>
+                        <div class="segment-display_bottom">0</div>
+                     </div>
+                     <div class="segment-overlay">
+                        <div class="segment-overlay_top">0</div>
+                        <div class="segment-overlay_bottom">0</div>
+                     </div>
+                  </div>
+               </div>
+
+               <div id="ones" class="time-section">
+                  <div class="time-segment">
+                     <div class="segment-display">
+                        <div class="segment-display_top">0</div>
+                        <div class="segment-display_bottom">0</div>
+                     </div>
+                     <div class="segment-overlay">
+                        <div class="segment-overlay_top">0</div>
+                        <div class="segment-overlay_bottom">0</div>
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+
       </div>
 
       <div class="apiInfo">
@@ -95,7 +114,9 @@
       <p>© 2024 | WDD330 | Elizabeth Chlarson</p>
    </footer>
 
-   <script src="../script/time.js"></script>
+   <script type="module" src="../script/time.js"></script>
+   <script src="../script/parallax.js"></script>
+   <script type="module" src="../script/buttonTransition.js"></script>
    <script src="../script/script.js"></script>
    <script src="../script/eventsAPI.js"></script>
    <script src="../script/musicAPI.js"></script>

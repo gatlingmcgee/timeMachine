@@ -32,6 +32,7 @@ body {
 /* Hero */
 .hero {
    position: relative;
+   z-index: 10000;
 }
 
 .logo {
@@ -54,13 +55,6 @@ body {
    top: 13rem;
    margin-left: 2rem;
    width: 25rem;
-}
-
-.tm {
-   position: absolute;
-   top: 3rem;
-   left: 33%;
-   width: 37rem;
 }
 
 button {
@@ -86,6 +80,7 @@ button {
 /* Data */
 .apiInfo {
    margin-left:1rem;
+   overflow: hidden;
 }
 
 .nav {
@@ -232,6 +227,31 @@ button {
 .segment-overlay.flip .segment-overlay_bottom {
    animation: flip-bottom 0.8s linear;
 }
+
+/* Parallax */
+#container {
+   overflow: hidden;
+   position: relative;
+   width: 100%;
+   height: 100vh;
+ }
+ 
+ .parallax-item {
+   position: absolute;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+ 
+ .parallax-item img {
+   margin-left: 3rem;
+   max-width: 120%;
+   max-height: 100vh;
+ }
+ 
+ .tm {
+   margin-top: -3%;
+ }
 
 @keyframes flip-top {
    0% {
