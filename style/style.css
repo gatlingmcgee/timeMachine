@@ -41,13 +41,6 @@ body {
    margin: 1rem;
 }
 
-.background {
-   width: 100%;
-   height: 40rem;
-   object-fit: cover;
-   z-index: -1;
-}
-
 .hero p {
    font-family: var(--paragraph-font);
    color: var(--secondary-color);
