@@ -117,13 +117,17 @@
       top: 44rem;
       left: 6%;
    }
+
+   .logo {
+      width: 12rem;
+   }
+
+   .hero button {
+      top: 8rem;
+   }
 }
 
 @media (max-width: 393px) {
-   .hero button {
-      top: 11rem;
-   }
-
    .hero p {
       top: 28rem;
    }
