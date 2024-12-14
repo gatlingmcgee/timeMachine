@@ -3,9 +3,10 @@ import { generateUniqueYear } from './time.js';
 import { updateYear } from './time.js'; 
 import { yearDisplay } from './time.js'; 
 
+let openDoor = new Image();
+
 // Preload the active image
 window.onload = function () {
-   const openDoor = new Image();
    openDoor.src = "../img/parallaxRunning.webp";
 };
 
@@ -24,7 +25,7 @@ startButton.addEventListener("click", function firstClick() {
 
     // Change to the active image after the gif duration
     setTimeout(() => {
-        timeMachine.src = openDoor;
+        timeMachine.src = openDoor.src;
     }, 3000); // Adjust this duration to match your gif's length
 
     // Update the button and text

@@ -54,7 +54,7 @@ body {
    position: absolute;
    top: 13rem;
    margin-left: 2rem;
-   width: 25rem;
+   width: 35rem;
 }
 
 button {
@@ -81,6 +81,7 @@ button {
 .apiInfo {
    margin-left:1rem;
    overflow: hidden;
+   margin-top: -6rem;
 }
 
 .nav {
@@ -147,7 +148,7 @@ button {
    font-size: var(--font-size-bold);
    text-align: center;
    position: absolute;
-   top: 5.5rem;
+   top: 14rem;
    left: 41%;
 }
 
