@@ -50,7 +50,8 @@ body {
    width: 35rem;
 }
 
-button {
+button,
+.navButton button {
    font-family: var(--heading-font);
    font-size: var(--font-size-small);
    font-weight: bold;

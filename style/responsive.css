@@ -151,7 +151,8 @@
 
 @media (max-width: 375px) {
    .hero p {
-      top: 28rem;
+      top: 36rem;
+      height: 6rem;
    }
 
    .hero button {
@@ -159,7 +160,7 @@
    }
 
    .apiInfo {
-      margin-top: -2rem;
+      margin-top: 0;
    }
 
    .parallax-item img {
@@ -169,4 +170,12 @@
    .tm {
       margin-top: -8%;
     }
+
+    #year-display {
+      top: 28rem;
+   }
+
+   #container {
+      height: 120vh;
+   }
 }
