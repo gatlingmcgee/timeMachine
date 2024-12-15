@@ -1,10 +1,10 @@
-const API_URL4 = "https://echlarson.github.io/jsonStorage/popCulture.json";
+export const API_URL4 = "https://echlarson.github.io/jsonStorage/popCulture.json";
 
 // Grab the HTML elements
-const cultureButton = document.getElementById("fetch-culture");
+export const cultureButton = document.getElementById("fetch-culture");
 
 //Fetch Music
-const fetchCulture = async (year) => {
+export const fetchCulture = async (year) => {
    try {
       //Loading Message
       boxList.innerHTML = "Loading...";
@@ -27,7 +27,7 @@ const fetchCulture = async (year) => {
       }
    };
 
-   const displayCulture = (popEvent) => {
+   export const displayCulture = (popEvent) => {
       //clear the section
       boxList.innerHTML = "";
       
@@ -83,12 +83,3 @@ const fetchCulture = async (year) => {
          boxList.appendChild(card);
       });
    };
-
-   cultureButton.addEventListener("click", () => {
-      const year = generatedYear.textContent || generatedYear.value;
-      if (year) {
-         fetchCulture(year);
-      } else {
-         boxList.innerHTML = "Spin again.";
-      }
-   });

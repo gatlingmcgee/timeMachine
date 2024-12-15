@@ -1,10 +1,10 @@
-const API_URL3 = "https://echlarson.github.io/jsonStorage/musicChart.json";
+export const API_URL3 = "https://echlarson.github.io/jsonStorage/musicChart.json";
 
 // Grab the HTML elements
-const musicButton = document.getElementById("fetch-music");
+export const musicButton = document.getElementById("fetch-music");
 
 //Fetch Music
-const fetchMusic = async (year) => {
+export const fetchMusic = async (year) => {
    try {
       //Loading Message
       boxList.innerHTML = "Loading...";
@@ -27,7 +27,7 @@ const fetchMusic = async (year) => {
       }
    };
 
-const displayMusic = (songs) => {
+export const displayMusic = (songs) => {
    //clear the section
    boxList.innerHTML = "";
    
@@ -65,12 +65,3 @@ const displayMusic = (songs) => {
       boxList.appendChild(card);
    });
 };
-
-musicButton.addEventListener("click", () => {
-   const year = generatedYear.textContent || generatedYear.value;
-   if (year) {
-      fetchMusic(year);
-   } else {
-      boxList.innerHTML = "Spin again.";
-   }
-});

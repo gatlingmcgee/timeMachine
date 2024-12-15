@@ -1,14 +1,14 @@
 //Historical Events API (https://api-ninjas.com/api/historicalevents)
-const API_URL1 = "https://api.api-ninjas.com/v1/historicalevents";
-const API_KEY = "U0vXZr1XIjrq3KdjZN9J1w==UMu9BsDb21Y1OAAd";
+export const API_URL1 = "https://api.api-ninjas.com/v1/historicalevents";
+export const API_KEY = "U0vXZr1XIjrq3KdjZN9J1w==UMu9BsDb21Y1OAAd";
 
 // Grab the HTML elements
-const generatedYear = document.getElementById("generated-year");
-const eventsButton = document.getElementById("fetch-events");
-const boxList = document.getElementById("boxList");
+export const generatedYear = document.getElementById("generated-year");
+export const eventsButton = document.getElementById("fetch-events");
+export const boxList = document.getElementById("boxList");
 
 //Fetch Events
-const fetchEvents = async (year) => {
+export const fetchEvents = async (year) => {
    try{
       //Loading Message
       boxList.innerHTML = "Loading...";
@@ -35,7 +35,7 @@ const fetchEvents = async (year) => {
    }
 };
 
-const displayEvents = (events) => {
+export const displayEvents = (events) => {
    //clear the section
    boxList.innerHTML = "";
 
@@ -61,12 +61,3 @@ const displayEvents = (events) => {
       boxList.appendChild(card);
    });
 };
-
-eventsButton.addEventListener("click", () => {
-   const year = generatedYear.textContent || generatedYear.value;
-   if (year) {
-      fetchEvents(year);
-   } else {
-      boxList.innerHTML = "Spin again.";
-   }
-});

@@ -2,6 +2,7 @@
 import { generateUniqueYear } from './time.js'; 
 import { updateYear } from './time.js'; 
 import { yearDisplay } from './time.js'; 
+import { initParallax, handleMouseMove, handleResize } from './parallax.js'; 
 
 let openDoor = new Image();
 
@@ -43,3 +44,6 @@ startButton.addEventListener("click", function firstClick() {
         boxList.innerHTML = "";
     });
 });
+
+// Initialize the parallax effect
+initParallax();

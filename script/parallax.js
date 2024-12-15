@@ -1,9 +1,9 @@
 //html setup
-var itemsHTMLCollection = document.getElementsByClassName('parallax-item');
-var itemsArray = Array.from(itemsHTMLCollection);
+export var itemsHTMLCollection = document.getElementsByClassName('parallax-item');
+export var itemsArray = Array.from(itemsHTMLCollection);
  
 //Input Setup
-var input = {
+export var input = {
   mouseX:{
     start: 0,
     end: window.innerWidth,
@@ -14,7 +14,7 @@ var input = {
 input.mouseX.range = input.mouseX.end - input.mouseX.start;
  
 //Output Setup
-var output = {
+export var output = {
   x: {
     start: -20,
     end: 20,
@@ -31,22 +31,22 @@ var output = {
  
 output.x.range = output.x.end - output.x.start;
  
-var mouse = {
+export var mouse = {
   x: window.innerWidth * .5,
 }
  
-var updateInputs = function() {
+export var updateInputs = function() {
   //mouse x and y inputs
   input.mouseX.current = mouse.x;
   input.mouseX.fraction = (input.mouseX.current - input.mouseX.start) / input.mouseX.range;
 }
  
-var updateOutputs = function() {
+export var updateOutputs = function() {
   //output x and y
   output.x.current = output.x.end - (input.mouseX.fraction * output.x.range);
 }
  
-var updateEachParallaxItem = function() {
+export var updateEachParallaxItem = function() {
   //apply output to html
   itemsArray.forEach(function(item, k) {
     var depth = parseFloat(item.dataset.depth, 10);
@@ -69,15 +69,17 @@ var handleMouseMove = function(event){
   updateEachParallaxItem();
 }
  
-var handleResize = function () {
+export var handleResize = function () {
   input.mouseX.end = window.innerWidth;
   input.mouseX.range = input.mouseX.end - input.mouseX.start;
 }
  
- 
-window.addEventListener('mousemove', handleMouseMove);
-window.addEventListener('resize', handleResize);
- 
- updateInputs();
- updateOutputs();
- updateEachParallaxItem();
+// Initialize the parallax effect
+export const initParallax = () => {
+  window.addEventListener('mousemove', handleMouseMove);
+  window.addEventListener('resize', handleResize);
+  
+  updateInputs();
+  updateOutputs();
+  updateEachParallaxItem();
+};
