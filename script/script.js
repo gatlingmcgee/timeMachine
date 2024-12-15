@@ -1,6 +1,6 @@
-import { fetchCulture, cultureButton } from './cultureAPI.js';
-import { fetchEvents, eventsButton, boxList } from './eventsAPI.js';
-import { fetchMusic, musicButton } from './musicAPI.js';
+import { fetchCulture } from './cultureAPI.js';
+import { fetchEvents, boxList } from './eventsAPI.js';
+import { fetchMusic } from './musicAPI.js';
 import { yearDisplay } from './time.js';
 
 
@@ -27,6 +27,7 @@ buttons.forEach(button => {
    button.addEventListener('mouseout', handleMouseOut);
 });
 
+// Added a DOMContentLoaded to let events load before DOM is loaded. - MDawg
 document.addEventListener("DOMContentLoaded", () => {
    const cultureButton = document.getElementById("fetch-culture");
    const eventsButton = document.getElementById("fetch-events");

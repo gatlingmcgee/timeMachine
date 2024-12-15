@@ -71,15 +71,16 @@ button,
 }
 
 /* Data */
+/* Changed margin-top from -6rem to -1rem - MDawg */
 .apiInfo {
    margin-left:1rem;
    overflow: hidden;
-   margin-top: -6rem;
-   z-index: 10002;
+   margin-top: -1rem;
 }
 
 .apiInfo button {
    pointer-events: auto;
+   z-index: 10002;
 }
 
 .nav {

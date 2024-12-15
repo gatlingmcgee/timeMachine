@@ -82,11 +82,13 @@ function updateYear(year) {
 // Select the span to display the year
 const yearDisplay = document.getElementById('generated-year');
 
+//This clears the dates so they don't stack upon each other - MDawg
 document.addEventListener("DOMContentLoaded", () => {
    localStorage.removeItem('generatedYear'); // Clear the list of generated years
  });
 
 // Get the list of generated years from localStorage, if any
+// Fixed mispell of "generatedYeara" to "generatedYear" - MDawg
 let generatedYear = JSON.parse(localStorage.getItem('generatedYear')) || [];
 
 console.log(generatedYear);
