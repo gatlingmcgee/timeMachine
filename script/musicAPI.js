@@ -1,3 +1,5 @@
+import { boxList } from './eventsAPI.js';
+
 export const API_URL3 = "https://echlarson.github.io/jsonStorage/musicChart.json";
 
 // Grab the HTML elements
@@ -19,6 +21,8 @@ export const fetchMusic = async (year) => {
       //Convert response to JSON
       const data = await response.json();
       const topSongs = data.topSongsByYear[year];
+
+      console.log("API Response Data: ", data);
 
       //Display Data
       displayMusic(topSongs);

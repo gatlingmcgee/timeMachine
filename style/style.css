@@ -32,7 +32,7 @@ body {
 /* Hero */
 .hero {
    position: relative;
-   z-index: 10000;
+   z-index: 10001;
 }
 
 .logo {
@@ -75,6 +75,11 @@ button,
    margin-left:1rem;
    overflow: hidden;
    margin-top: -6rem;
+   z-index: 10002;
+}
+
+.apiInfo button {
+   pointer-events: auto;
 }
 
 .nav {
@@ -241,6 +246,7 @@ button,
    margin-left: 3rem;
    max-width: 120%;
    max-height: 100vh;
+   pointer-events: none;
  }
  
  .tm {
